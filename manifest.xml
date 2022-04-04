@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name><![CDATA[ Obacht! Pdf Plugin ]]></name>
+		<description><![CDATA[ Plugin zur Eindindung von PDF's ]]></description>
+		<element>pdf_obacht</element>
+		<folder>content</folder>
+		<type>plugin</type>
+		<version>3.0.0</version>
+		<infourl title="Obacht!">http://www.obacht-idee.de/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/pucki1988/ObachtPdfPlugin/releases/download/3.0.0/ObachtPdfPlugin.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Obacht! ]]></maintainer>
+		<maintainerurl>http://www.obacht-idee.de</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="3.([89]|10)"/>
+		<client>site</client>
+	</update>
+	<update>
+		<name><![CDATA[ Obacht! Pdf Plugin ]]></name>
+		<description><![CDATA[ Plugin zur Eindindung von PDF's ]]></description>
+		<element>pdf_obacht</element>
+		<folder>content</folder>
+		<type>plugin</type>
+		<version>4.0.0</version>
+		<infourl title="Obacht!">http://www.obacht-idee.de/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/pucki1988/ObachtPdfPlugin/releases/download/4.0.0/ObachtPdfPlugin.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Obacht! ]]></maintainer>
+		<maintainerurl>http://www.obacht-idee.de</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="4.*"/>
+		<client>site</client>
+	</update>
+</updates>

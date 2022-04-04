@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="content" method="upgrade">
+	<name>Obacht! PDF Plugin</name>
+	<author>Andreas Schuster</author>
+	<creationDate>01.04.2022</creationDate>
+	<copyright>Copyright (C) 2020 - 2021 Obacht! All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>schuster-andi@gmx.de</authorEmail>
+	<authorUrl>www.obacht-idee.de</authorUrl>
+	<version>3.0.0</version>
+	<description>Plugin zum Einbinden von PDF Obacht!</description>
+	<files>
+		<filename plugin="pdf_obacht">pdf_obacht.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+		<folder>templates</templates>
+		<folder>fonts</templates>
+	</files>
+	<languages>
+		<language tag="de-DE">language/de-DE.plg_system_pdf_obacht.ini</language>
+		<language tag="de-DE">language/de-DE.plg_system_pdf_obacht.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="pdf_categories" type="category" extension="com_content"
+							multiple="true" size="5"
+							label="Kategorie wählen"
+							description="Alle Kategorien wo das Plugin angezeigt wird"
+						>
+							<option value="0">JOPTION_ALL_CATEGORIES</option>
+						</field>
+						<field name="pdf_base_folder" type="folderlist" default="" 
+						label="Wähle das Basis Verzeichnis" 
+						directory="images" 
+						filter="" 
+						exclude="" 
+						stripext="" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" name="PLG_CONTENT_PDF_OBACHT" priority="1"><![CDATA[https://raw.githubusercontent.com/pucki1988/ObachtPdfPlugin/main/manifest.xml]]></server>
+	</updateservers>
+</extension>
