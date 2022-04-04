@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.0.0" type="plugin" group="content" method="upgrade">
+<extension version="4.0.0" type="plugin" group="content" method="upgrade">
 	<name>Obacht! PDF Plugin</name>
 	<author>Andreas Schuster</author>
 	<creationDate>01.04.2022</creationDate>
@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>schuster-andi@gmx.de</authorEmail>
 	<authorUrl>www.obacht-idee.de</authorUrl>
-	<version>3.0.0</version>
+	<version>4.0.0</version>
 	<description>Plugin zum Einbinden von PDF Obacht!</description>
 	<files>
 		<filename plugin="pdf_obacht">pdf_obacht.php</filename>
