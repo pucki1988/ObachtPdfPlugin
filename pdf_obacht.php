@@ -22,14 +22,14 @@ class plgContentPdf_Obacht extends JPlugin
 		{	
 			if(in_array($article->catid,$this->params->get("pdf_categories")))
 			{
-				if(strlen($article->jcfields[3]->value) == 7)
+				if(strlen($article->jcfields[$this->params->get("pdf_field_id")]->value) == 7)
 				{
-					$pdf=explode("_",$article->jcfields[3]->value);
+					$pdf=explode("_",$article->jcfields[$this->params->get("pdf_field_id")]->value);
 					
 					$pfad=JURI::base()."/images/". $this->params->get("pdf_base_folder")."/".$pdf[1]."/".$pdf[0]."_".$pdf[1].".pdf";
 					
 					echo $this->base_path;
-					$content='<div class="solid-container vereinszeitung"></div>';
+					$content='<div class="solid-container vereinszeitung container my-3"></div>';
 
 					$content.='<script src="plugins/content/pdf_obacht/js/jquery.min.js"></script>';
 					$content.='<script src="plugins/content/pdf_obacht/js/html2canvas.min.js"></script>';
@@ -38,12 +38,16 @@ class plgContentPdf_Obacht extends JPlugin
 					$content.='<script type="text/javascript">window.PDFJS_LOCALE = {pdfJsWorker: "'.JURI::base().'plugins/content/pdf_obacht/js/pdf.worker.js",pdfJsCMapUrl: "cmaps"};</script>';
 					$content.='<script src="plugins/content/pdf_obacht/js/3dflipbook.min.js"></script>';
 					
-					$content.="<script type='text/javascript'>var options = { pdf: '".$pfad."',template: { html: '".JURI::base()."plugins/content/pdf_obacht/templates/default-book-view.html',  styles: ['".JURI::base()."plugins/content/pdf_obacht/css/white-book-view.css']}};
+					$content.="<script type='text/javascript'>var options = { pdf: '".$pfad."',template: { html: '".JURI::base()."plugins/content/pdf_obacht/templates/default-book-view.html',  styles: ['".JURI::base()."plugins/content/pdf_obacht/css/white-book-view.css'],links: [{rel: 'stylesheet',href: '".JURI::base()."plugins/content/pdf_obacht/css/font-awesome.min.css'}]}};
 					
 					jQuery('.vereinszeitung').FlipBook(options);
 					</script>";
 					
 					return $content;
+				}else{
+					if(strlen($article->jcfields[$this->params->get("pdf_field_id")]->value)>0){
+					return '<div class="container"><div class="alert alert-danger" role="alert">ePaper Ausgabe noch nicht verfügbar</div></div>';
+					}
 				}
 			}
 		}

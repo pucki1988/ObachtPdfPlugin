@@ -15,8 +15,8 @@
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>images</folder>
-		<folder>templates</templates>
-		<folder>fonts</templates>
+		<folder>templates</folder>
+		<folder>fonts</folder>
 	</files>
 	<languages>
 		<language tag="de-DE">language/de-DE.plg_system_pdf_obacht.ini</language>
@@ -31,13 +31,14 @@
 							description="Alle Kategorien wo das Plugin angezeigt wird"
 						>
 							<option value="0">JOPTION_ALL_CATEGORIES</option>
-						</field>
-						<field name="pdf_base_folder" type="folderlist" default="" 
+				</field>
+				<field name="pdf_base_folder" type="folderlist" default="" 
 						label="Wähle das Basis Verzeichnis" 
 						directory="images" 
 						filter="" 
 						exclude="" 
 						stripext="" />
+				<field name="pdf_field_id" type="number" default="0" label="Feld ID der ePaper Ausgabe" step="1" />
 			</fieldset>
 		</fields>
 	</config>
